@@ -1,0 +1,44 @@
+/* Black Background with Animation */
+body {
+    background: linear-gradient(45deg, #333, #000);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+    color: #fff; /* Text color for better contrast on dark background */
+  }
+  
+  @keyframes gradientBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  #map { height: 250px; width: 100%; animation: fadeIn 1s ease-in-out; }
+  .output-box { height: 200px; overflow-y: auto; background: #f8f9fa; padding: 10px; border: 1px solid #ddd; animation: slideIn 0.5s ease-in-out; }
+  .CodeMirror { height: auto; border: 1px solid #ced4da; animation: fadeInUp 0.6s ease-out; }
+  .dark-mode { background-color: #212529; color: white; }
+  .dark-mode .card { background-color: #2c2f33; color: white; }
+  .dark-mode .CodeMirror { background-color: #1e1e1e; color: #f8f8f2; }
+  .dark-mode .output-box { background-color: #343a40; color: #f8f9fa; }
+  .error-line { background: #ffdddd !important; }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes fadeInUp {
+    from { transform: translateY(10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  

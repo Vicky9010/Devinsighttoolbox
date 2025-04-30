@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dev Insight Toolbox</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+  <link rel="stylesheet" href="style.css"> <!-- Custom CSS -->
+</head>
+<body class="bg-light">
+  <div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="m-0">Dev Insight Toolbox</h2>
+      <button id="toggle-theme" class="btn btn-outline-secondary">Toggle Dark Mode</button>
+    </div>
+
+    <div class="row g-4">
+      <!-- IP & System Info Panel -->
+      <div class="col-lg-6">
+        <div class="card shadow-sm">
+          <div class="card-header bg-primary text-white">IP & System Info</div>
+          <div class="card-body">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" id="ip-input" placeholder="Enter IP address (leave empty for your own)">
+              <button class="btn btn-outline-primary" id="ip-search">Search</button>
+            </div>
+            <ul class="list-group mb-3" id="ip-info"></ul>
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- JS Debugger Panel -->
+      <div class="col-lg-6">
+        <div class="card shadow-sm">
+          <div class="card-header bg-dark text-white">JavaScript Debugger</div>
+          <div class="card-body">
+            <textarea id="code" class="form-control mb-3" placeholder="Write your JavaScript code here..."></textarea>
+            <div class="d-flex gap-2 mb-3">
+              <button id="run-code" class="btn btn-success">Run Code</button>
+              <button id="save-code" class="btn btn-outline-primary">Save</button>
+              <button id="load-code" class="btn btn-outline-info">Load</button>
+            </div>
+            <div class="output-box" id="output"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
+  <script src="script.js"></script> <!-- Custom JS -->
+</body>
+</html>
